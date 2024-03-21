@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Prompt',sans-serif;
     box-sizing: border-box;
 }
 body{
@@ -82,8 +82,99 @@ nav button{
     margin-left: 20px;
 }
 .emailsignup button{
-    background: white;
+    background: red;
     border: 0;
     outline: 0;
     color: white;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 15px 30px;
+}
+.features{
+    padding: 50px 12%;
+    font-size: 22px;
+}
+.row{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px 0;
+}
+.textcol{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+.imgcol{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+.imgcol img{
+    display: block;
+    width: 90%;
+    margin: auto;
+}
+.features h2{
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.faq{
+    padding: 10px 12%;
+    text-align: center;
+    font-size: 18px;
+}
+.faq h2{
+    font-weight: 600;
+    font-size: 50px;
+}
+.accordion{
+    margin: 60px auto;
+    width: 100%;
+    max-width: 750px;
+}
+.accordion li{
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+}
+.accordion li label{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 500;
+    background: rgb(50, 50, 50);
+}
+label::after{
+    content: '+';
+    font-size: 44px;
+    position: absolute;
+    right: 400px;
+    transition: transform 0.5s;
+}
+input[type='radio']{
+    display: none;
+}
+.accordion .content{
+    background:  rgb(40, 40, 40);
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s,padding 0.5s;
+}
+.accordion input[type="radio"]:checked + label + .content{
+    max-height: 600px;
+    padding: 30px 20px;
+}
+.accordion input[type="radio"]:checked + label::after{
+    transform: rotate(135deg);
+}
+.faq .emailsignup{
+    max-width: 600px;
+    margin: 20px auto 60px;
+}
+.faq small{
+    font-size: 13px;
 }
